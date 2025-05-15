@@ -58,10 +58,11 @@ Evaluate performance with metrics: AUC, F1-score, precision-recall<br/>
 #### Results
 
 1) Logistic Regression<br/>
+
 Confusion Matrix
-| 984 (TN) | 222 (FP) |
+| (TN) 984 | (FP) 222 |
 |----------|----------|
-| 270 (FN) | 924 (TP) | 
+| (FN) 270 | (TP) 924 | 
   
 Classification Report
 |              | precision | recall  | f1-score | support |
