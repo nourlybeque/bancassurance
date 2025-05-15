@@ -1,5 +1,6 @@
-### bancassurance
+### Bancassurance
 
+#### Overview
 🏦 Project Title: Predicting Customer Propensity to Buy Insurance in a Bank<br/>
 🎯 Goal: Use customer data from a bank to build a predictive model that identifies clients most likely to purchase insurance products (e.g., life insurance, credit protection, property insurance).<br/>
 
@@ -51,3 +52,19 @@ Evaluate performance with metrics: AUC, F1-score, precision-recall<br/>
 - Higher ROI on marketing campaigns
 - Better customer targeting
 - Improved customer experience (less spammy offers)
+
+
+
+#### Results
+
+1) Logistic Regression<br/>
+<br/>
+Confusion Matrix<br/>
+| 984 | 222 |
+|-----|-----|
+| 270 | 924 | 
+  
+
+
+
+
