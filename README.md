@@ -96,7 +96,7 @@ This is a very strong score — indicating the model is very capable of distingu
 🧠 What This Tells You<br/>
 The logistic regression model is already performing quite well.<br/>
 There's slight room to improve recall — especially if your goal is not to miss potential buyers (e.g., for marketing).<br/>
-False positives (222) are acceptable if you're willing to market to some who won’t buy, but want to catch more potential buyers.
+False positives (222) are acceptable if you're willing to market to some who won’t buy, but want to catch more potential buyers.<br/>
 
 
 #### 2) Random Forest<br/>
@@ -137,5 +137,40 @@ This is near perfect. The model very clearly separates the two classes.<br/>
 💡 Should You Trust These Results?<br/>
 Such strong results could suggest:<br/>
 ✅ The model generalizes well.<br/>
-❗ Or it's overfitting (especially if your test set was small or resampled improperly).
+❗ Or it's overfitting (especially if your test set was small or resampled improperly).<br/>
+
+
+#### 3) Light Gradient Boosting Model (LightGBM)<br/>
+
+Confusion Matrix
+| (TN) 1094 | (FP) 112  |
+|-----------|-----------|
+| (FN) 0    | (TP) 1194 | 
+  
+Classification Report
+|              | precision | recall  | f1-score | support |
+|--------------|-----------|---------|----------|---------|
+| 0            | 1.00      | 0.91    | 0.95     | 1206    |
+| 1            | 0.91      | 1.00    | 0.96     | 1194    |
+| accuracy     |           |         | 0.95     | 2400    |
+| macro avg    | 0.96      | 0.95    | 0.95     | 2400    |
+| weighted avg | 0.96      | 0.95    | 0.95     | 2400    |
+
+ROC AUC Score: 0.9872364864677172
+
+
+✅ Confusion Matrix<br/>
+No false negatives for class 1 — a very strong signal if you’re focused on predicting purchasers.<br/>
+Slight over-prediction of purchasers, causing some false positives (112 class 0 predicted as 1).<br/>
+
+📊 Classification Report<br/>
+High precision and recall for both classes — model is well-balanced.<br/>
+F1-scores near 1 mean both precision and recall are strong.<br/>
+
+📈 ROC AUC Score: 0.987<br/>
+This is excellent. It means the model is highly capable of distinguishing between the two classes.<br/>
+
+Final Thoughts<br/>
+Compared to Logistic Regression and even Random Forest, this LGBM model performs slightly better.<br/>
+It also might be more efficient for large datasets and has built-in handling of categorical features (in raw form).<br/>
 
