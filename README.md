@@ -58,13 +58,42 @@ Evaluate performance with metrics: AUC, F1-score, precision-recall<br/>
 #### Results
 
 1) Logistic Regression<br/>
-<br/>
-Confusion Matrix<br/>
-| 984 | 222 |
-|-----|-----|
-| 270 | 924 | 
+Confusion Matrix
+| 984 (TN) | 222 (FP) |
+|----------|----------|
+| 270 (FN) | 924 (TP) | 
   
+Classification Report
+|              | precision | recall  | f1-score | support |
+|--------------|-----------|---------|----------|---------|
+| 0            | 0.78      | 0.82    | 0.80     | 1206    |
+| 1            | 0.81      | 0.77    | 0.79     | 1194    |
+| accuracy     |           |         | 0.80     | 2400    |
+| macro avg    | 0.80      | 0.79    | 0.79     | 2400    |
+| weighted avg | 0.80      | 0.80    | 0.79     | 2400    |
+
+ROC AUC Score: 0.8704606504051489
 
 
+✅ Model Interpretation Summary (Logistic Regression)
 
+1. Confusion Matrix<br/>
+True Negatives (TN): 984 → Non-buyers correctly predicted<br/>
+False Positives (FP): 222 → Non-buyers predicted as buyers<br/>
+False Negatives (FN): 270 → Buyers predicted as non-buyers<br/>
+True Positives (TP): 924 → Buyers correctly predicted<br/>
+
+2. Classification Report<br/>
+Precision (class 1): 0.81 → When the model predicts a customer will buy insurance, it’s right 81% of the time.<br/>
+Recall (class 1): 0.77 → It captures 77% of actual insurance buyers.<br/>
+F1-score (class 1): 0.79 → Good balance of precision and recall.<br/>
+Accuracy: 80% overall correct predictions.<br/>
+
+3. ROC AUC Score: 0.870<br/>
+This is a very strong score — indicating the model is very capable of distinguishing between buyers and non-buyers.<br/>
+
+🧠 What This Tells You<br/>
+The logistic regression model is already performing quite well.<br/>
+There's slight room to improve recall — especially if your goal is not to miss potential buyers (e.g., for marketing).<br/>
+False positives (222) are acceptable if you're willing to market to some who won’t buy, but want to catch more potential buyers.
 
