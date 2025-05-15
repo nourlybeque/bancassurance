@@ -35,9 +35,8 @@ Use classification algorithms:
 - Random Forest
 - XGBoost
 <br/>
-Target variable: Bought_Insurance (Yes/No)
-<br/>
-Evaluate performance with metrics: AUC, F1-score, precision-recall
+Target variable: Bought_Insurance (Yes/No)<br/>
+Evaluate performance with metrics: AUC, F1-score, precision-recall<br/>
 
 6. Model Interpretation<br/>
 - Feature importance: e.g., age, prior campaign response, account balance
