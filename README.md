@@ -35,7 +35,7 @@ Use classification algorithms:
 - Logistic Regression
 - Random Forest
 - XGBoost
-<br/>
+
 Target variable: Bought_Insurance (Yes/No)<br/>
 Evaluate performance with metrics: AUC, F1-score, precision-recall<br/>
 
