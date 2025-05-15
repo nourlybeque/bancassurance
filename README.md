@@ -98,3 +98,44 @@ The logistic regression model is already performing quite well.<br/>
 There's slight room to improve recall — especially if your goal is not to miss potential buyers (e.g., for marketing).<br/>
 False positives (222) are acceptable if you're willing to market to some who won’t buy, but want to catch more potential buyers.
 
+
+2) Random Forest<br/>
+
+Confusion Matrix
+| (TN) 1139 | (FP) 67   |
+|-----------|-----------|
+| (FN) 0    | (TP) 1194 | 
+  
+Classification Report
+|              | precision | recall  | f1-score | support |
+|--------------|-----------|---------|----------|---------|
+| 0            | 1.00      | 0.94    | 0.97     | 1206    |
+| 1            | 0.95      | 1.00    | 0.97     | 1194    |
+| accuracy     |           |         | 0.97     | 2400    |
+| macro avg    | 0.97      | 0.97    | 0.97     | 2400    |
+| weighted avg | 0.97      | 0.97    | 0.97     | 2400    |
+
+ROC AUC Score: 0.999866316102347
+
+
+✅ Random Forest Model Interpretation
+
+📊 Confusion Matrix<br/>
+True Negatives (TN): 1139 – Non-buyers correctly identified.<br/>
+False Positives (FP): 67 – Predicted as buyers, but didn’t buy.<br/>
+False Negatives (FN): 0 – Perfectly predicted all actual buyers.<br/>
+True Positives (TP): 1194 – Buyers correctly identified.<br/>
+
+📄 Classification Report<br/>
+Accuracy: 97% — Extremely high.<br/>
+F1-score: Balanced precision and recall for both classes.<br/>
+Recall (class 1): 1.00 → Captures all buyers — excellent for a marketing model.<br/>
+
+📈 ROC AUC Score: 0.9999<br/>
+This is near perfect. The model very clearly separates the two classes.<br/>
+
+💡 Should You Trust These Results?<br/>
+Such strong results could suggest:<br/>
+✅ The model generalizes well.<br/>
+❗ Or it's overfitting (especially if your test set was small or resampled improperly).
+
