@@ -1,6 +1,6 @@
-### Bancassurance
+## Bancassurance
 
-#### Overview
+### Overview
 🏦 Project Title: Predicting Customer Propensity to Buy Insurance in a Bank<br/>
 🎯 Goal: Use customer data from a bank to build a predictive model that identifies clients most likely to purchase insurance products (e.g., life insurance, credit protection, property insurance).<br/>
 
@@ -55,9 +55,9 @@ Evaluate performance with metrics: AUC, F1-score, precision-recall<br/>
 
 
 
-#### Results
+### Results
 
-1) Logistic Regression<br/>
+#### 1) Logistic Regression<br/>
 
 Confusion Matrix
 | (TN) 984 | (FP) 222 |
@@ -99,7 +99,7 @@ There's slight room to improve recall — especially if your goal is not to miss
 False positives (222) are acceptable if you're willing to market to some who won’t buy, but want to catch more potential buyers.
 
 
-2) Random Forest<br/>
+#### 2) Random Forest<br/>
 
 Confusion Matrix
 | (TN) 1139 | (FP) 67   |
